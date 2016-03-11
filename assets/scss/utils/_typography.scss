@@ -1,0 +1,12 @@
+// Font awesome
+@mixin icons( $symbol, $set: 'FontAwesome', $place: 'before', $color: '', $margin: '0 12px' ) {
+	&::#{$place} {
+		font-family: $set;
+		content: $symbol;
+		margin: unquote($margin);
+
+		@if $color != '' {
+			color: $color;
+		}
+	}
+}

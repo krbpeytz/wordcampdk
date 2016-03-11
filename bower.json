@@ -1,0 +1,31 @@
+{
+  "name": "drsales",
+  "version": "4.0.0",
+  "homepage": "",
+  "authors": [
+    "James Bonham <jb@peytz.dk>",
+    "Patrick Hesselberg <phh@peytz.dk>",
+    "Rasmus Taarnby <rt@peytz.dk>"
+  ],
+  "description": "A WordPress custom theme.",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "normalize-scss": "~3.0.3",
+    "bourbon": "~4.2.3",
+    "neat": "~1.7.2",
+    "fastclick": "~1.0.6",
+    "svgeezy": "~1.0.0",
+    "fontawesome": "~4.4.0"
+  }
+}

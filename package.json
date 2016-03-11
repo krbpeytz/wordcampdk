@@ -1,0 +1,47 @@
+{
+  "name": "drsales",
+  "version": "0.0.1",
+  "description": "A WordPress/Gulp/Bower/Sass starter kit.",
+  "homepage": "http://gitlab.peytz.dk/wp/bullet-foundation",
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.peytz.dk/wp/bullet-foundation.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "Peytz & Co.": "",
+    "Rasmus Taarnby": "rt@peytz.dk"
+  },
+  "license": "GNU General Public Licence 2.0",
+  "main": "gulpfile.js",
+  "private": true,
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-load-plugins": "*",
+    "gulp-minify-css": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "1.0.5",
+    "gulp-sass": "^2.0.1",
+    "gulp-size": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-streamify": "*",
+    "gulp-svgmin": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "jshint-stylish": "*",
+    "npm-check-updates": "*",
+    "path": "*",
+    "tiny-lr": "*"
+  },
+  "dependencies": {
+    "gulp-flatten": "0.0.4"
+  }
+}

@@ -1,0 +1,31 @@
+// Scalable containers
+@mixin max-width-scale() {
+	@include media( $wide-screen-up ) {
+		width: $wide-screen-up;
+	}
+	@include media( $xlarge-screen-up ) {
+		width: $xlarge-screen-up;
+	}
+	@include media( $large-screen-up ) {
+		width: $large-screen-up;
+	}
+	@include media( $medium-screen-up ) {
+		width: $medium-screen-up;
+	}
+}
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+// Break out of container to fullwidth - ugly but works
+@mixin extend-fullwidth() {
+	padding-left:  3000px;
+	padding-right: 3000px;
+	margin-left:   -3000px !important;
+	margin-right:  -3000px !important;
+}
