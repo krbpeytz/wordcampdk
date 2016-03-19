@@ -29,3 +29,14 @@
 	margin-left:   -3000px !important;
 	margin-right:  -3000px !important;
 }
+
+// Cover image - fullwidth, vertical middle
+@mixin background-cover() {
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	z-index: 1;
+}

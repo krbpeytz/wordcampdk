@@ -1,8 +1,16 @@
 // General Grid
 // -------------------------------------------/
 
+.screen-reader-text{
+	@include screen-reader-text();
+
+	h1{
+		@include screen-reader-text();
+	}
+}
+
 .container {
+	position: relative;
+	@include max-width-scale();
 	@include outer-container();
-	padding-left: 3%;
-	padding-right: 3%;
 }

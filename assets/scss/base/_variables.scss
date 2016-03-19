@@ -10,27 +10,32 @@ $wide-screen-up: new-breakpoint( min-width 100.063em 12 );
 $max-width: rem(1280);
 
 // Main colours
-$color-white:     #FFFFFF;
-$color-gainsboro: #f5f5f5;
-$color-lightgray: #e8e8e8;
-$color-silver:    #c6c6c6;
-$color-darkgray:  #b2b2b2;
-$color-gray:      #929191;
-$color-dimgray:   #727171;
-$color-jet:       #424242;
-$color-eerie:     #262626;
-$color-black:     #000000;
-$color-steel:     #3a93ac;
-$color-cardinal:  #e84c4c;
+$color-white:         #FFFFFF;
+$color-gainsboro:     #f5f5f5;
+$color-silver:        #aaaaac;
+$color-gray:          #797979;
+$color-thistle:       #d29bbd;
+$color-purple:        #983e75;
+$color-pearly:        #b23681;
+$color-redviolet:     #d91c7e;
+$color-phlox:         #dd2476;
+$color-darkpurple:    #1d022d;
+$color-vermilion:     #e94011;
+$color-yellow:        #eec558;
+$color-persian:       #d38312;
+$color-orange:        #f87f1d;
+$color-orangepantone: #ff512f;
+$color-eerie:         #313131;
+$color-black:         #252525;
 
 // Base colours
-$font-color-base: $color-jet;
-$accent-color-hover: $color-cardinal;
-$accent-color-base: $color-cardinal;
+$font-color-base: $color-black;
+$accent-color-hover: $color-orange;
+$accent-color-base: $color-orange;
 
 // Typography
-$font-family-base: 'gibsonregular';
-$font-family-header: $font-family-base;
+$font-family-base: 'Open Sans';
+$font-family-alt: 'Playfair Display';
 $base-font-size: rem(16);
 
 // Font weights
@@ -39,10 +44,10 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 // Border
-$border-base: 1px solid $color-gray;
+$border-base: 1px solid $color-gainsboro;
 $border-width-base: rem(4);
 
 // Layout
-$margin-base: rem(80);
-$padding-base: rem(60);
+$margin-base: rem(120);
+$padding-base: rem(80);
 $gutter-base: rem(150);
