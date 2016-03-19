@@ -18,7 +18,7 @@
 			top: 0; left: 0;
 			height: 100%;
 			width: 100%;
-			background-image: url( ../../img/landing-bg.jpg );
+			background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/landing-bg.jpg );
 			@include background-cover();
 			opacity: 0.2;
 			z-index: 1;
@@ -61,7 +61,7 @@
 				left: $padding-base;
 				height: rem(208);
 				width: rem(267);
-				background: url( ../../img/wpdk-logo.png );
+				background: url( https://2016.denmark.wordcamp.org/files/2016/03/wpdk-logo.png );
 				opacity: 0.9;
 			}
 		}
