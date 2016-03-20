@@ -58,6 +58,26 @@
 				font-size: 400%;
 				letter-spacing: 0.15rem;
 				margin-bottom: rem(15);
+
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					border-right: rem(1) solid $color-white;
+					width: rem(2000);
+					height: rem(10);
+					left: - rem(1630);
+					top: 3rem;
+					opacity: 0.08;
+				}
+
+				&::before {
+					border-top: rem(1) solid $color-white;
+				}
+				&::after {
+					border-bottom: rem(1) solid $color-white;
+					margin-top: - rem(9);
+				}
 			}
 
 			.subtitle {
