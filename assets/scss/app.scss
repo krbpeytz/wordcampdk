@@ -13,13 +13,13 @@
 @import 'utils/typography';               // Typography mixins
 
 // Layouts
-@import "layouts/general";          // General styling
-@import "layouts/header";           // Header styling
-@import "layouts/asides";           // Sidebars styling
-@import "layouts/footer";           // Footer styling
+@import "layouts/general";                // General styling
+@import "layouts/header";                 // Header styling
+@import "layouts/asides";                 // Sidebars styling
+@import "layouts/footer";                 // Footer styling
 
 // Components
-//@import "components/"
+@import "components/section-quote";        // Section quote styling
 
 // Page specific
 @import "pages/frontpage";                // Frontpage styling
