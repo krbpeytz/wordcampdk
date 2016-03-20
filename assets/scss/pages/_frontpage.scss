@@ -12,6 +12,7 @@
 		background-color: $color-pearly;
 		background: linear-gradient( -77deg, $color-persian, $color-pearly );
 		overflow: hidden;
+		z-index: 11;
 
 		&::before {
 			content: '';
@@ -22,20 +23,22 @@
 			background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/landing-bg.jpg );
 			@include background-cover();
 			opacity: 0.2;
-			z-index: 1;
+			z-index: 12;
 		}
 
-		&::after {
-			content: '';
-			height: rem(1);
-			width: rem(10000);
-			background: $color-white;
-			position: absolute;
-			right: - rem(5000);
-			top: 0;
-			z-index: 3;
-			opacity: 0.15;
-			@include transform( rotate(-45deg) );
+		.home & {
+			&::after {
+				content: '';
+				height: rem(1);
+				width: rem(10000);
+				background: $color-white;
+				position: absolute;
+				right: - rem(5000);
+				top: 0;
+				z-index: 14;
+				opacity: 0.15;
+				@include transform( rotate(-45deg) );
+			}
 		}
 
 		.container {
@@ -47,7 +50,7 @@
 			top: 38%;
 			right: 0;
 			width: 100%;
-			z-index: 2;
+			z-index: 13;
 			color: $color-white;
 			opacity: 0.9;
 			padding: 0 $padding-base;
