@@ -1,4 +1,21 @@
 .site-footer {
+	background-color: $color-darkpurple;
+	padding: ( 0.5 * $padding-base ) 0;
+	text-align: center;
+
+	.main-navigation {
+		display: none;
+	}
+
+	.site-info {
+		a {
+			color: $color-white;
+			font-size: 1.15rem;
+			font-family: $font-family-alt;
+			letter-spacing: 0.1rem;
+		}
+	}
+
 	.home & {
 		.site-title {
 			position: fixed;
