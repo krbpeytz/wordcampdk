@@ -2,8 +2,15 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
-	margin: ( 0.5 * $padding-base ) 0;
+	padding: ( 0.25 * $padding-base ) 0 ( 0.35 * $padding-base );
+	background: rgba( 255, 255, 255, 0.95 );
 	z-index: 99;
+
+	.home & {
+		margin: ( 0.5 * $padding-base ) 0;
+		padding: 0;
+		background: none;
+	}
 
 	.site-header-main {
 		position: relative;
@@ -23,7 +30,11 @@
 		font-size: 0;
 		height: rem(19);
 		width: rem(31);
-		background: url( http://local.wordpress.dev/wp-content/uploads/2016/03/icon-burger.png );
+		background: url( ../../img/icon-burger-black.png );
+
+		.home & {
+			background: url( http://local.wordpress.dev/wp-content/uploads/2016/03/icon-burger.png );
+		}
 	}
 
 	.site-header-menu {
@@ -38,7 +49,11 @@
 			a {
 				font-family: $font-family-base;
 				font-weight: 800;
-				color: $color-white;
+				color: $color-black;
+
+				.home & {
+					color: $color-white;
+				}
 			}
 
 			&:last-child {
@@ -49,8 +64,12 @@
 
 				a {
 					text-transform: uppercase;
-					border-bottom: rem(2) $color-white solid;
+					border-bottom: rem(2) $color-black solid;
 					padding-bottom: rem(10);
+
+					.home & {
+						border-bottom-color: $color-white;
+					}
 				}
 			}
 		}

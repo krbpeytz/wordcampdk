@@ -1,0 +1,48 @@
+body.page:not(.home) {
+	position: relative;
+
+	.site-content {
+		margin-top: rem(70);
+	}
+
+	.hentry {
+		position: relative;
+		@include max-width-scale();
+		@include outer-container();
+		padding: 0 ( 2 * $margin-base );
+
+	}
+
+	h1 {
+		color: $color-black;
+		font-family: $font-family-alt;
+		font-size: 420%;
+		letter-spacing: 0.15rem;
+		margin: ( 1.5 * $margin-base ) 0 $padding-base;
+	}
+
+	.post-thumbnail {
+		margin-left: - ( 2 * $margin-base );
+		@include calc( 'width', '100% + ( 4 * #{$margin-base} )' );
+		height: rem(500);
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: auto;
+			@include vertical-align();
+		}
+	}
+
+	.entry-content {
+		padding: ( 0.5 * $padding-base ) 0 $padding-base;
+		font-family: $font-family-base;
+		font-size: 120%;
+		line-height: 180%;
+		color: $color-eerie;
+	}
+
+	.entry-footer {
+		display: none;
+	}
+}
