@@ -24,6 +24,7 @@
 		width: 100%;
 		text-align: center;
 		padding-left: rem(60);
+		@include admin-sticky-fix();
 
 		a {
 			font-family: $font-family-alt;

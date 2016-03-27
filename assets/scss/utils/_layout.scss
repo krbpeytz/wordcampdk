@@ -40,3 +40,14 @@
   	background-size: cover;
 	z-index: 1;
 }
+
+// Admin sticky fix
+@mixin admin-sticky-fix() {
+	.admin-bar & {
+		margin-top: rem(46);
+
+		@include media( $medium-screen-up ) {
+			margin-top: rem(32);
+		}
+	}
+}

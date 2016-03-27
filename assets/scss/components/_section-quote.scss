@@ -75,4 +75,14 @@
 			background: linear-gradient( -77deg, $color-persian, $color-pearly );
 		}
 	}
+
+	.admin-bar.home & {
+		&::after {
+			margin-top: rem(46);
+
+			@include media( $medium-screen-up ) {
+				margin-top: rem(32);
+			}
+		}
+	}
 }
