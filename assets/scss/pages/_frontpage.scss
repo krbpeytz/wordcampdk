@@ -1,6 +1,9 @@
 .home {
 	#content {
-		@include display( flex );
+		display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flexbox;
   		@include flex-direction( column );
 
 		& > * {
