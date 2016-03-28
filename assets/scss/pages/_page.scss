@@ -27,6 +27,10 @@ body.page:not(.home), .single {
 		@include outer-container();
 		padding: 0 ( 2 * $margin-base );
 
+		a {
+			color: $color-orange;
+		}
+
 		&::before,
 		&::after {
 			content: '';
