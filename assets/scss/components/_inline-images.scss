@@ -1,0 +1,57 @@
+.entry-content {
+
+	img {
+		display: block;
+		margin: 1rem 0;
+		max-width: 100%;
+		height: auto;
+	}
+
+	// When images have captions...
+	.wp-caption {
+		// Reset image positions when inside figures
+		img {
+			margin: 0;
+
+			&.aligncenter,
+			&.alignnone,
+			&.alignleft,
+			&.alignright {
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	.wp-caption-text {
+		font-size: 80%;
+		font-style: italic;
+		text-align: left;
+		padding: 0.5rem 2rem 0;
+	}
+}
+
+@include media( $medium-screen-up ) {
+
+	img {
+		&.alignleft,
+		&.aligncenter,
+		&.alignright {
+			float: none;
+			display: block;
+			margin: 1rem auto;
+			vertical-align: baseline;
+		}
+
+		&.alignleft {
+			float: left;
+			margin-right: 1rem;
+		}
+		&.alignright {
+			float: right;
+			margin-left: 1rem;
+		}
+	}
+
+}
