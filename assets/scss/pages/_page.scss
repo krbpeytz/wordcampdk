@@ -5,12 +5,48 @@ body.page:not(.home) {
 		margin-top: rem(70);
 	}
 
+	.site-main {
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: - 2rem;
+			min-height: rem(500);
+			width: 100%;
+			background-image: url( ../../img/lines-regular-bg.png );
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+		}
+	}
+
 	.hentry {
 		position: relative;
 		@include max-width-scale();
 		@include outer-container();
 		padding: 0 ( 2 * $margin-base );
 
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			border-right: rem(1) solid $color-purple;
+			width: rem(2000);
+			height: rem(10);
+			left: - 145%;
+			top: 3rem;
+			opacity: 0.5;
+		}
+
+		&::before {
+			border-right: rem(1) solid $color-purple;
+		}
+		&::after {
+			border-bottom: rem(1) solid $color-purple;
+			margin-top: - rem(9);
+		}
 	}
 
 	h1 {
