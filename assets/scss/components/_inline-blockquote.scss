@@ -1,0 +1,48 @@
+.entry-content {
+	blockquote {
+		p {
+			margin: 0;
+		}
+
+		font-family: $font-family-alt;
+		font-size: 150%;
+		line-height: 140%;
+		letter-spacing: 0.15rem;
+		color: $color-black;
+		position: relative;
+		margin: 2rem 0;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			border-right: rem(1) solid $color-black;
+			width: rem(2000);
+			height: rem(10);
+			left: - 260%;
+			top: 2rem;
+			opacity: 0.2;
+		}
+
+		&::before {
+			border-top: rem(1) solid $color-black;
+		}
+		&::after {
+			border-bottom: rem(1) solid $color-black;
+			margin-top: - rem(9);
+		}
+
+		cite {
+			&, a {
+				font-family: $font-family-base;
+				font-size: 70%;
+				font-weight: 600;
+				letter-spacing: 0.1rem;
+				text-transform: uppercase;
+				color: $color-orange;
+				margin-top: 1rem;
+				display: block;
+			}
+		}
+	}
+}
