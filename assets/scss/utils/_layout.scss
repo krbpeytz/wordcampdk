@@ -51,3 +51,12 @@
 		}
 	}
 }
+
+// Flex order
+@mixin order( $order: 1 ) {
+	-webkit-box-ordinal-group: $order;   /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-ordinal-group: $order;      /* OLD - Firefox 19- */
+	-ms-flex-order: $order;              /* TWEENER - IE 10 */
+	-webkit-order: $order;               /* NEW - Chrome */
+	order: $order;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
