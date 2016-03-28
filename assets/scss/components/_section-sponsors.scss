@@ -4,9 +4,10 @@
 	background: linear-gradient( -77deg, $color-orangepantone, $color-phlox );
 
 	.container {
-		padding: $margin-base 0;
+		margin: $margin-base auto;
 		font-size: 0;
 		text-align: center;
+		height: rem(100);
 	}
 
 	h2 {
@@ -25,5 +26,12 @@
 		font-family: $font-family-alt;
 		font-size: 1.5rem;
 		border-bottom: rem(1) solid $color-white;
+	}
+
+	.home & {
+		position: absolute;
+		width: 100%;
+		margin-top: rem(290) + $margin-base;
+		margin-bottom: rem(105);
 	}
 }

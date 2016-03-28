@@ -46,6 +46,9 @@
 	}
 
 	.home & {
+		height: rem(105);
+		margin-top: ( 2 * $margin-base ) + rem(100);
+
 		.site-title {
 			top: rem(45);
 			z-index: 10;
