@@ -8,14 +8,14 @@
 	z-index: 99;
 
 	.home & {
-		padding: ( 0.5 * $padding-base ) 0;
+		// padding: ( 0.5 * $padding-base ) 0;
+		padding: $padding-base/2 1rem;
 		background: none;
 	}
 
 	.site-header-main {
 		position: relative;
-		@include max-width-scale();
-		@include outer-container();
+		padding: 0 1em;
 	}
 
 	.site-branding {
@@ -44,7 +44,7 @@
 		.menu-item {
 			display: none;
 			opacity: 0.85;
-			padding: 0 0.75rem;
+			// padding: 0 0.75rem;
 
 			a {
 				font-family: $font-family-base;
@@ -76,7 +76,13 @@
 
 		&.toggled-on {
 			.menu-item {
-				display: inline-block;
+				display: block;
+
+				a {
+					display: block;
+					padding: .5em 0;
+				}
+
 			}
 		}
 	}
