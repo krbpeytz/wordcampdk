@@ -14,8 +14,3 @@
 	@include max-width-scale();
 	@include outer-container();
 }
-
-.site {
-	overflow-x: hidden;
-	width: 100%;
-}
