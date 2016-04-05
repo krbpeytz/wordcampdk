@@ -1,0 +1,184 @@
+.home {
+	.site-main {
+		position: relative;
+		@include max-width-scale();
+		@include outer-container();
+		padding-bottom: $margin-base;
+		@include clearfix;
+
+		.entry-summary,
+		.entry-content,
+		.post-thumbnail {
+			display: none;
+		}
+
+		.hentry {
+			position: relative;
+			float: left;
+			height: rem(290) / 4;
+			line-height: rem(290) / 4;
+			@include calc( 'width', '92% - #{rem(500)} - ( 0.7 * #{$padding-base} )' );
+			border-top: $color-gainsboro rem(1) solid;
+			margin-left: 0.7 * $padding-base;
+
+			.entry-header {
+				padding-left: 8rem;
+
+				h2 {
+					margin: 0;
+					padding-right: 2rem;
+
+					a {
+						color: $color-gray;
+						font-family: $font-family-base;
+						font-weight: 600;
+
+					}
+				}
+			}
+
+			.entry-footer {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				a {
+					color: $color-silver;
+					text-transform: uppercase;
+					font-family: $font-family-base;
+					font-weight: 700;
+					font-size: 75%;
+				}
+
+				.byline,
+				.comments-link,
+				.edit-link,
+				.posted-on .updated:not(.published) {
+					display: none;
+				}
+			}
+
+			&:last-child {
+				border-bottom: $color-gainsboro rem(1) solid;
+			}
+
+			&:first-child {
+				height: rem(290);
+				width: rem(500);
+				border: none;
+				margin-left: 0;
+				line-height: 100%;
+
+				.entry-header {
+					position: absolute;
+					left: 0.75 * $padding-base;
+					top: $padding-base;
+					z-index: 1;
+					padding: 0;
+
+					a {
+						color: $color-white;
+						font-family: $font-family-base;
+						font-weight: 800;
+						font-size: 180%;
+						line-height: 100%;
+					}
+				}
+
+				.post-thumbnail {
+					display: block;
+					height: 100%;
+					width: 100%;
+					overflow: hidden;
+					position: relative;
+					border-left: rem(6) solid $color-orange;
+
+					img {
+						width: 100%;
+						height: auto;
+						@include vertical-align();
+					}
+
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0; left: 0;
+						height: 100%;
+						width: 100%;
+						background: $color-black;
+						opacity: 0.6;
+					}
+				}
+
+				.entry-footer {
+					position: absolute;
+					top: auto;
+					left: 0.75 * $padding-base;
+					bottom: 0.4 * $padding-base;
+
+					a {
+						font-family: $font-family-base;
+						color: lighten( $color-white, 20% );
+						font-weight: 400;
+						font-size: 80%;
+					}
+				}
+			}
+		}
+	}
+
+	.news-title {
+		padding-top: $margin-base;
+		overflow: hidden;
+
+		h2 {
+			content: 'Nyheder';
+			display: block;
+			font-family: $font-family-alt;
+			font-size: 350%;
+			font-weight: 400;
+			padding-left: $margin-base;
+			margin: 0 0 ( 0.75 * $padding-base );
+		}
+
+		.container {
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				border-left: rem(1) solid $color-purple;
+				width: rem(2000);
+				height: rem(10);
+				right: - 90%;
+				top: 3rem;
+				opacity: 0.2;
+			}
+
+			&::before {
+				border-left: rem(1) solid $color-purple;
+			}
+			&::after {
+				border-bottom: rem(1) solid $color-purple;
+				margin-top: - rem(9);
+			}
+		}
+	}
+
+	.news-link {
+		position: relative;
+
+		.container {
+			a {
+				position: absolute;
+				right: 0;
+				top: 5.5rem;
+				display: block;
+				color: darken( $color-gainsboro, 10% );
+				font-size: 500%;
+				font-family: $font-family-base;
+			}
+		}
+	}
+}

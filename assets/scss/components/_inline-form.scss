@@ -1,0 +1,44 @@
+.entry-content {
+	&, &.contact-form {
+		label {
+			span {
+				margin: 0 0.5rem;
+				color: $color-silver;
+				font-size: 80%;
+			}
+		}
+
+		input[type=text],
+		input[type=email] {
+			width: 75%;
+			background: lighten( $color-orange, 42% );
+			padding: 1rem 1.5rem;
+			margin-bottom: 1rem;
+		}
+
+		textarea {
+			width: 100%;
+			height: rem(250);
+			background: lighten( $color-orange, 42% );
+			padding: 1rem 1.5rem;
+			border: none;
+		}
+
+		input, textarea {
+			&:focus {
+				background: $color-orange;
+				color: $color-white;
+			}
+		}
+
+		input[type=submit] {
+			background: none;
+			font-family: $font-family-base;
+			font-weight: 800;
+			color: $color-orange;
+			text-transform: uppercase;
+			border-bottom: rem(2) $color-orange solid;
+			padding-bottom: rem(10);
+		}
+	}
+}

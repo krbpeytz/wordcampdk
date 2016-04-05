@@ -2,13 +2,13 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
+	@include admin-sticky-fix();
 	padding: ( 0.25 * $padding-base ) 0 ( 0.35 * $padding-base );
 	background: rgba( 255, 255, 255, 0.95 );
 	z-index: 99;
 
 	.home & {
-		margin: ( 0.5 * $padding-base ) 0;
-		padding: 0;
+		padding: ( 0.5 * $padding-base ) 0;
 		background: none;
 	}
 

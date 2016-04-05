@@ -40,3 +40,81 @@
   	background-size: cover;
 	z-index: 1;
 }
+
+// Admin sticky fix
+@mixin admin-sticky-fix() {
+	.admin-bar & {
+		margin-top: rem(46);
+
+		@include media( $medium-screen-up ) {
+			margin-top: rem(32);
+		}
+	}
+}
+
+// Mixin display
+@mixin display($value) {
+	// flex | inline-flex
+	@if $value == "flex" {
+	    // 2009
+	    display: -webkit-box;
+	    display: -moz-box;
+	    display: box;
+
+	    // 2012
+	    display: -webkit-flex;
+	    display: -moz-flex;
+	    display: -ms-flexbox; // 2011 (IE 10)
+	    display: flex;
+	} @else if $value == "inline-flex" {
+	    display: -webkit-inline-box;
+	    display: -moz-inline-box;
+	    display: inline-box;
+
+	    display: -webkit-inline-flex;
+	    display: -moz-inline-flex;
+	    display: -ms-inline-flexbox;
+	    display: inline-flex;
+	} @else {
+		display: $value;
+	}
+}
+
+@mixin flex-direction($value: row) {
+
+	// Alt values.
+	$value-2009: $value;
+	$value-2011: $value;
+	$direction: normal;
+
+	@if $value == row {
+		$value-2009: horizontal;
+	} @else if $value == "row-reverse" {
+		$value-2009: horizontal;
+		$direction: reverse;
+	} @else if $value == column {
+		$value-2009: vertical;
+	} @else if $value == "column-reverse" {
+		$value-2009: vertical;
+		$direction: reverse;
+	}
+
+	// 2009
+	@include prefixer(box-orient, $value-2009, webkit moz spec);
+	@include prefixer(box-direction, $direction, webkit moz spec);
+
+	// 2012
+	@include prefixer(flex-direction, $value, webkit moz spec);
+
+	// 2011 (IE 10)
+	-ms-flex-direction: $value;
+}
+
+// Flex order
+@mixin order( $order: 1 ) {
+	-webkit-box-ordinal-group: $order;   /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-ordinal-group: $order;      /* OLD - Firefox 19- */
+	-ms-flex-order: $order;              /* TWEENER - IE 10 */
+	-webkit-order: $order;               /* NEW - Chrome */
+	order: $order;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
