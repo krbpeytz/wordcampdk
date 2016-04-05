@@ -3,20 +3,31 @@
 	overflow: hidden;
 
 	.container {
-		padding: $margin-base;
+		padding: 4rem 2rem;
+
+		@media screen and (min-width: 40em) {
+			padding: 4rem;
+		}
+
+		@media screen and (min-width: 60em) {
+			padding: 8rem;
+		}
+
 	}
 
 	blockquote {
+
 		&, & p {
-			margin: 0;
+			// margin: 0;
 		}
 
 		font-family: $font-family-alt;
-		font-size: 200%;
-		line-height: 160%;
+		font-size: 150%;
 		letter-spacing: 0.15rem;
 		color: $color-black;
 		position: relative;
+		margin: 0 auto;
+		max-width: 40em;
 
 		&::before,
 		&::after {
