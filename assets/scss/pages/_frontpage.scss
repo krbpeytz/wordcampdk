@@ -39,19 +39,17 @@
 			z-index: 12;
 		}
 
-		.home & {
-			&::after {
-				content: '';
-				height: rem(1);
-				width: rem(10000);
-				background: $color-white;
-				position: absolute;
-				right: - rem(5000);
-				top: 0;
-				z-index: 14;
-				opacity: 0.15;
-				@include transform( rotate(-45deg) );
-			}
+		&::after {
+			content: '';
+			height: rem(1);
+			width: rem(10000);
+			background: $color-white;
+			position: absolute;
+			right: - rem(5000);
+			top: 0;
+			z-index: 14;
+			opacity: 0.15;
+			@include transform( rotate(-45deg) );
 		}
 
 		.container {
