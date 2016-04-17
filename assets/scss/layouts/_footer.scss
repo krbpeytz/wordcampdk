@@ -22,7 +22,7 @@
 		z-index: 100;
 		margin: 0 auto;
 		width: rem(350);
-		display: inline-block;
+		display: none;
 		padding-left: rem(60);
 		@include admin-sticky-fix();
 
@@ -42,6 +42,10 @@
 			margin-top: - rem(4);
 			background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/wpdk-logo-color.png );
 			@include background-cover();
+		}
+
+		@include media( $medium-screen-up ) {
+			display: inline-block;
 		}
 	}
 

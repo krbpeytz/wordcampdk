@@ -8,8 +8,12 @@
 	z-index: 99;
 
 	.home & {
-		padding: ( 0.5 * $padding-base ) 0;
+		padding: ( 0.25 * $padding-base ) 0;
 		background: none;
+
+		@include media( $medium-screen-up ) {
+			padding: ( 0.5 * $padding-base ) 0;
+		}
 	}
 
 	.site-header-main {
@@ -30,10 +34,27 @@
 		font-size: 0;
 		height: rem(19);
 		width: rem(31);
+		left: 0.25 * $padding-base;
 		background: url( https://2016.denmark.wordcamp.org/files/2016/03/icon-burger-black.png );
 
 		.home & {
 			background: url( https://2016.denmark.wordcamp.org/files/2016/03/icon-burger.png );
+		}
+
+		&.toggled-on {
+			z-index: 100;
+			@include calc( 'left', '#{rem(500)} - #{$padding-base}' );
+			position: fixed;
+			top: 0.25 * $padding-base;
+			left: 0.25 * $padding-base;
+
+			@include media( $medium-screen-up ) {
+				top: 0.5 * $padding-base;
+			}
+		}
+
+		@include media( $xlarge-screen-up ) {
+			left: 0;
 		}
 	}
 
@@ -55,12 +76,21 @@
 					color: $color-white;
 				}
 			}
+		}
 
-			&:last-child {
+		&.toggled-on {
+			.menu-item {
+				display: inline-block;
+			}
+		}
+
+		&:not(.toggled-on) {
+			.menu-item:last-child {
 				display: block;
 				position: absolute;
 				top: 0;
-				right: 0;
+				right: 0.25 * $padding-base;
+				padding: 0;
 
 				a {
 					text-transform: uppercase;
@@ -71,12 +101,11 @@
 						border-bottom-color: $color-white;
 					}
 				}
-			}
-		}
 
-		&.toggled-on {
-			.menu-item {
-				display: inline-block;
+				@include media( $medium-screen-up ) {
+					right: 0;
+					padding: 0 0.75rem;
+				}
 			}
 		}
 	}

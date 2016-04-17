@@ -58,18 +58,24 @@
 
 		.tagline {
 			position: absolute;
-			top: 38%;
+			top: 25%;
 			right: 0;
 			width: 100%;
 			z-index: 13;
 			color: $color-white;
 			opacity: 0.9;
-			padding: 0 $padding-base;
-			text-align: right;
+			padding: 0 ( 0.25 * $padding-base );
+			text-align: center;
+
+			@include media( $medium-screen-up ) {
+				top: 38%;
+				padding: 0 $padding-base;
+				text-align: right;
+			}
 
 			.title {
 				font-family: $font-family-alt;
-				font-size: 400%;
+				font-size: 200%;
 				letter-spacing: 0.15rem;
 				margin-bottom: rem(15);
 
@@ -92,25 +98,43 @@
 					border-bottom: rem(1) solid $color-white;
 					margin-top: - rem(9);
 				}
+
+				@include media( $medium-screen-up ) {
+					font-size: 400%;
+				}
 			}
 
 			.subtitle {
 				font-family: $font-family-base;
-				font-size: 200%;
+				font-size: 100%;
 				font-weight: 100;
 				letter-spacing: 0.2rem;
 				text-transform: uppercase;
+
+				@include media( $medium-screen-up ) {
+					font-size: 200%;
+				}
 			}
 
 			&::before {
 				content: '';
-				position: absolute;
-				top: -2rem;
-				left: $padding-base;
-				height: rem(208);
-				width: rem(267);
+				position: relative;
+				display: inline-block;
+				height: rem(140);
+				width: rem(180);
 				background: url( https://2016.denmark.wordcamp.org/files/2016/03/wpdk-logo.png );
+				background-size: contain;
 				opacity: 0.9;
+				margin-bottom: 1.5rem;
+
+				@include media( $medium-screen-up ) {
+					position: absolute;
+					top: -2rem;
+					left: $padding-base;
+					height: rem(208);
+					width: rem(267);
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

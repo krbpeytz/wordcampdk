@@ -68,11 +68,15 @@
 			content: '';
 			position: fixed;
 			z-index: 10;
-			height: rem(110);
+			height: rem(70);
 			width: 100%;
 			top: 0;
 			left: 0;
 			background: linear-gradient( -77deg, $color-persian, $color-pearly );
+
+			@include media( $medium-screen-up ) {
+				height: rem(110);
+			}
 		}
 	}
 
