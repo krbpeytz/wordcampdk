@@ -10,9 +10,13 @@
 	.site-info {
 		a {
 			color: $color-white;
-			font-size: 1.15rem;
+			font-size: 0.9rem;
 			font-family: $font-family-alt;
 			letter-spacing: 0.1rem;
+
+			@include media( $medium-screen-up ) {
+				font-size: 1.15rem;
+			}
 		}
 	}
 
@@ -51,7 +55,7 @@
 
 	.home & {
 		height: rem(105);
-		margin-top: ( 2 * $margin-base ) + rem(100);
+		margin-top: 0.5 * $padding-base + rem(58);
 
 		.site-title {
 			top: rem(45);
@@ -67,6 +71,10 @@
 				background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/wpdk-logo.png );
 				margin-top: - rem(8);
 			}
+		}
+
+		@include media( $medium-screen-up ) {
+			margin-top: ( 2 * $margin-base ) + rem(100);
 		}
 	}
 }

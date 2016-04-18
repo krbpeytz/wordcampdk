@@ -4,7 +4,7 @@
 	background: linear-gradient( -77deg, $color-orangepantone, $color-phlox );
 
 	.container {
-		margin: $margin-base auto;
+		margin: ( 0.75 * $padding-base ) auto;
 		font-size: 0;
 		text-align: center;
 		height: rem(100);
@@ -31,7 +31,15 @@
 	.home & {
 		position: absolute;
 		width: 100%;
-		margin-top: rem(290) + $margin-base;
+		margin-top: rem(250) + 4 * rem(100);
 		margin-bottom: rem(105);
+
+		@include media( $medium-screen-up ) {
+			margin-top: rem(290) + $margin-base;
+
+			.container {
+				margin: $margin-base auto;
+			}
+		}
 	}
 }
