@@ -3,31 +3,24 @@
 	overflow: hidden;
 
 	.container {
-		padding: 4rem 2rem;
+		padding: ( 0.75 * $padding-base ) ( 0.25 * $padding-base );
 
-		@media screen and (min-width: 40em) {
-			padding: 4rem;
+		@include media( $medium-screen-up ) {
+			padding: $margin-base;
 		}
-
-		@media screen and (min-width: 60em) {
-			padding: 8rem;
-		}
-
 	}
 
 	blockquote {
-
 		&, & p {
-			// margin: 0;
+			margin: 0;
 		}
 
 		font-family: $font-family-alt;
-		font-size: 150%;
+		font-size: 135%;
+		line-height: 160%;
 		letter-spacing: 0.15rem;
 		color: $color-black;
 		position: relative;
-		margin: 0 auto;
-		max-width: 40em;
 
 		&::before,
 		&::after {
@@ -39,6 +32,11 @@
 			left: - 200%;
 			top: 2rem;
 			opacity: 0.2;
+			display: none;
+
+			@include media( $medium-screen-up ) {
+				display: block;
+			}
 		}
 
 		&::before {
@@ -47,6 +45,10 @@
 		&::after {
 			border-bottom: rem(1) solid $color-black;
 			margin-top: - rem(9);
+		}
+
+		@include media( $medium-screen-up ) {
+			font-size: 200%;
 		}
 	}
 
@@ -79,11 +81,15 @@
 			content: '';
 			position: fixed;
 			z-index: 10;
-			height: rem(110);
+			height: rem(70);
 			width: 100%;
 			top: 0;
 			left: 0;
 			background: linear-gradient( -77deg, $color-persian, $color-pearly );
+
+			@include media( $medium-screen-up ) {
+				height: rem(110);
+			}
 		}
 	}
 

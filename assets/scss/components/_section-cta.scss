@@ -1,119 +1,159 @@
 .section-cta {
-    position: relative;
-    overflow: hidden;
-    background-color: $color-gainsboro;
-    .container {
-        padding: $margin-base 0;
-        font-size: 0;
-    }
-    .cta {
-        position: relative;
-        vertical-align: top;
-        height: rem(430);
-        font-size: $base-font-size;
-        padding: rem(80);
-        text-align: center;
+	position: relative;
+	overflow: hidden;
+	background-color: $color-gainsboro;
 
-        @media screen and (min-width: 60em) {
-          display: inline-block;
-          padding: 0;
-          // text-align: left;
-          width: 33.3333%;
-        }
+	.container {
+		padding: 0;
+		font-size: 0;
 
-        a {
-            color: $color-black;
-            position: relative;
-            z-index: 3;
-            display: block;
-        }
-        .title {
-            font-family: $font-family-alt;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 270%;
-            line-height: 130%;
-            letter-spacing: 0.1rem;
+		@include media( $medium-screen-up ) {
+			padding: $margin-base ( 0.25 * $padding-base );
+		}
 
-            @media screen and (min-width: 60em) {
-              margin-top: rem(60);
-            }
+		@include media( $large-screen-up ) {
+			padding: $margin-base 0;
+		}
+	}
 
-            &::after {
-                content: '';
-                display: block;
-                margin: ( 0.5 * $padding-base ) 0;
-                width: rem(170);
-                height: rem(3);
-                background: $color-redviolet;
-            }
-        }
-        .desc {
-            font-family: $font-family-base;
-            line-height: 180%;
+	.cta {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		height: rem(350);
+		font-size: $base-font-size;
+		margin-bottom: 1.5rem;
 
-            @media screen and (min-width: 60em) {
-              padding: 0 2rem;
-              // padding-right: 2 * rem(60);
-            }
-        }
-        &::after,
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: rem(60);
-            z-index: 1;
-            height: rem(430);
-            @include calc( 'width', '100% - ( 2 * #{rem(60)} )' );
-            background-color: $color-white;
-            @include background-cover();
-            opacity: 0.1;
-            @include transition( opacity 0.2s ease-in-out );
-        }
-        &::before {
-            opacity: 0.7;
-            z-index: 2;
-            width: 0;
-            background: $color-redviolet;
-            @include transition( width 0.1s ease-in-out );
-        }
-        &:nth-child(1) {
-            &::after {
-                background-image: url("https://2016.denmark.wordcamp.org/files/2016/03/cta-bg-1.jpg");
-            }
-             &:before,
-            .title::after {
-                background: $color-redviolet;
-            }
-        }
-        &:nth-child(2) {
-            &::after {
-                background-image: url("https://2016.denmark.wordcamp.org/files/2016/03/cta-bg-2.jpg");
-            }
-             &:before,
-            .title::after {
-                background: $color-vermilion;
-            }
-        }
-        &:nth-child(3) {
-            &::after {
-                background-image: url("https://2016.denmark.wordcamp.org/files/2016/03/cta-bg-3.jpg");
-            }
-             &:before,
-            .title::after {
-                background: $color-orange;
-            }
-        }
-        &:hover {
-            &:after {
-                opacity: 0.25;
-                @include transition( opacity 0.5s ease-in-out );
-            }
-            &:before {
-                @include calc( 'width', '100% - ( 2 * #{rem(60)} )' );
-                @include transition( width 0.4s ease-in-out );
-            }
-        }
-    }
+		@include media( $medium-screen-up ) {
+			width: 33.3333%;
+			margin-bottom: 0;
+			height: rem(430);
+		}
+
+		a {
+			color: $color-black;
+			position: relative;
+			z-index: 3;
+			display: block;
+		}
+
+		.cta-wrap {
+			padding: 0 ( 0.25 * $padding-base );
+
+			@include media( $medium-screen-up ) {
+				padding: 0;
+			}
+		}
+
+		.title {
+			font-family: $font-family-alt;
+			font-weight: 900;
+			text-transform: uppercase;
+			font-size: 170%;
+			line-height: 130%;
+			letter-spacing: 0.1rem;
+			margin-top: rem(60);
+
+			&::after {
+				content: '';
+				display: block;
+				margin: ( 0.25 * $padding-base ) 0;
+				width: rem(170);
+				height: rem(3);
+				background: $color-redviolet;
+			}
+
+			@include media( $medium-screen-up ) {
+				font-size: 270%;
+
+				&::after {
+					margin: ( 0.5 * $padding-base ) 0;
+				}
+			}
+		}
+
+		.desc {
+			font-family: $font-family-base;
+			line-height: 180%;
+
+			@include media( $medium-screen-up ) {
+				padding-right: 2 * rem(60);
+			}
+		}
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 1;
+			height: rem(350);
+			width: 100%;
+			background-color: $color-white;
+			@include background-cover();
+			opacity: 0.1;
+			@include transition( opacity 0.2s ease-in-out );
+
+			@include media( $medium-screen-up ) {
+				right: rem(60);
+				@include calc( 'width', '100% - ( 2 * #{rem(60)} )' );
+				height: rem(430);
+			}
+		}
+
+		&::before {
+			opacity: 0.7;
+			z-index: 2;
+			width: 0;
+			background: $color-redviolet;
+			@include transition( width 0.1s ease-in-out );
+		}
+
+		&:nth-child(1) {
+			&::after {
+				background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/cta-bg-1.jpg );
+			}
+
+			.title::after,
+			&:before {
+				background: $color-redviolet;
+			}
+		}
+
+		&:nth-child(2) {
+			&::after {
+				background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/cta-bg-2.jpg );
+			}
+
+			.title::after,
+			&:before {
+				background: $color-vermilion;
+			}
+		}
+
+		&:nth-child(3) {
+			&::after {
+				background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/cta-bg-3.jpg );
+			}
+
+			.title::after,
+			&:before {
+				background: $color-orange;
+			}
+		}
+
+		&:hover {
+			&:after {
+				opacity: 0.25;
+				@include transition( opacity 0.5s ease-in-out );
+			}
+
+			&:before {
+				@include calc( 'width', '100% - ( 2 * #{rem(60)} )' );
+				@include transition( width 0.4s ease-in-out );
+			}
+		}
+	}
 }

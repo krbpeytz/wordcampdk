@@ -4,41 +4,68 @@
 	background-color: $color-yellow;
 
 	.container {
-		padding: $margin-base 0;
+		padding: ( 0.75 * $padding-base ) ( 0.25 * $padding-base );
 		font-size: 0;
 		background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/info-logo-yellow.png );
 		background-repeat: no-repeat;
 		background-position: right 0 top ( - rem(40) );
+
+		@include media( $medium-screen-up ) {
+			padding: $margin-base ( 0.25 * $padding-base );
+		}
+
+		@include media( $large-screen-up ) {
+			padding: $margin-base 0;
+		}
 	}
 
 	.tickets {
 		display: inline-block;
-		width: 60%;
 		font-size: 1.4rem;
 		color: $color-black;
 		font-family: $font-family-alt;
 		letter-spacing: 0.1rem;
+		text-align: center;
 
 		.link {
 			margin-top: rem(10);
 
 			a {
-				font-size: 3.5rem;
+				font-size: 1.75rem;
 				color: $color-white;
 				font-family: $font-family-base;
 				font-weight: 800;
 				text-transform: uppercase;
 				letter-spacing: 0;
 			}
+		}
 
-			&::before {
-				content: '';
-				display: inline-block;
-				width: rem(70);
-				height: rem(4);
-				background: $color-white;
-				margin-bottom: rem(15);
-				margin-right: rem(30);
+		@include media( $medium-screen-up ) {
+			width: 60%;
+			text-align: left;
+
+			.link {
+				a {
+					font-size: 2.5rem;
+
+					&::before {
+						content: '';
+						display: inline-block;
+						width: rem(70);
+						height: rem(4);
+						background: $color-white;
+						margin-bottom: rem(15);
+						margin-right: rem(30);
+					}
+				}
+			}
+		}
+
+		@include media( $large-screen-up ) {
+			.link {
+				a {
+					font-size: 3.5rem;
+				}
 			}
 		}
 	}
@@ -46,14 +73,13 @@
 	.location {
 		position: relative;
 		display: inline-block;
-		width: 40%;
 		font-size: 1.1rem;
 		color: $color-black;
 		font-family: $font-family-alt;
 		letter-spacing: 0.1rem;
-		text-align: right;
+		text-align: center;
 		@include icons( '\f041', 'fontawesome', 'after', $color-white, '0px' );
-		padding-right: rem(130);
+		margin-top: 2.5rem;
 
 		a {
 			color: $color-black;
@@ -74,10 +100,24 @@
 		}
 
 		&::after {
-			font-size: 10rem;
-			position: absolute;
-			top: - rem(50);
-			right: 0;
+			font-size: 5rem;
+			display: block;
+			margin-top: 1rem;
+		}
+
+		@include media( $medium-screen-up ) {
+			width: 40%;
+			text-align: right;
+			margin-top: 0;
+			padding-right: rem(130);
+
+			&::after {
+				font-size: 10rem;
+				position: absolute;
+				right: 0;
+				top: - rem(50);
+				margin-top: 0;
+			}
 		}
 	}
 }
