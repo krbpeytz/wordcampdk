@@ -4,17 +4,28 @@
 	background-color: $color-gainsboro;
 
 	.container {
-		padding: $margin-base 0;
+		padding: 0;
 		font-size: 0;
+
+		@include media( $medium-screen-up ) {
+			padding: $margin-base 0;
+		}
 	}
 
 	.cta {
 		position: relative;
 		display: inline-block;
 		vertical-align: top;
-		width: 33.3333%;
-		height: rem(430);
+		width: 100%;
+		height: rem(350);
 		font-size: $base-font-size;
+		margin-bottom: 1.5rem;
+
+		@include media( $medium-screen-up ) {
+			width: 33.3333%;
+			margin-bottom: 0;
+			height: rem(430);
+		}
 
 		a {
 			color: $color-black;
@@ -23,11 +34,19 @@
 			display: block;
 		}
 
+		.cta-wrap {
+			padding: 0 ( 0.25 * $padding-base );
+
+			@include media( $medium-screen-up ) {
+				padding: 0;
+			}
+		}
+
 		.title {
 			font-family: $font-family-alt;
 			font-weight: 900;
 			text-transform: uppercase;
-			font-size: 270%;
+			font-size: 170%;
 			line-height: 130%;
 			letter-spacing: 0.1rem;
 			margin-top: rem(60);
@@ -35,17 +54,28 @@
 			&::after {
 				content: '';
 				display: block;
-				margin: ( 0.5 * $padding-base ) 0;
+				margin: ( 0.25 * $padding-base ) 0;
 				width: rem(170);
 				height: rem(3);
 				background: $color-redviolet;
 			}
+
+			@include media( $medium-screen-up ) {
+				font-size: 270%;
+
+				&::after {
+					margin: ( 0.5 * $padding-base ) 0;
+				}
+			}
 		}
 
 		.desc {
-			padding-right: 2 * rem(60);
 			font-family: $font-family-base;
 			line-height: 180%;
+
+			@include media( $medium-screen-up ) {
+				padding-right: 2 * rem(60);
+			}
 		}
 
 		&::after,
@@ -53,14 +83,20 @@
 			content: '';
 			position: absolute;
 			top: 0;
-			right: rem(60);
+			right: 0;
 			z-index: 1;
-			height: rem(430);
-			@include calc( 'width', '100% - ( 2 * #{rem(60)} )' );
+			height: rem(350);
+			width: 100%;
 			background-color: $color-white;
 			@include background-cover();
 			opacity: 0.1;
 			@include transition( opacity 0.2s ease-in-out );
+
+			@include media( $medium-screen-up ) {
+				right: rem(60);
+				@include calc( 'width', '100% - ( 2 * #{rem(60)} )' );
+				height: rem(430);
+			}
 		}
 
 		&::before {
