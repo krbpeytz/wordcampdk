@@ -69,8 +69,11 @@
 
 			@include media( $medium-screen-up ) {
 				top: 38%;
-				padding: 0 $padding-base;
 				text-align: right;
+			}
+
+			@include media( $large-screen-up ) {
+				padding: 0 $padding-base;
 			}
 
 			.title {
@@ -100,6 +103,10 @@
 				}
 
 				@include media( $medium-screen-up ) {
+					font-size: 350%;
+				}
+
+				@include media( $large-screen-up ) {
 					font-size: 400%;
 				}
 			}
@@ -130,10 +137,16 @@
 				@include media( $medium-screen-up ) {
 					position: absolute;
 					top: -2rem;
+					left: 0.25 * $padding-base;
+					height: rem(163);
+					width: rem(210);
+					margin-bottom: 0;
+				}
+
+				@include media( $large-screen-up ) {
 					left: $padding-base;
 					height: rem(208);
 					width: rem(267);
-					margin-bottom: 0;
 				}
 			}
 		}

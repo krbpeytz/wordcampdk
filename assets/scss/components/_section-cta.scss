@@ -8,6 +8,10 @@
 		font-size: 0;
 
 		@include media( $medium-screen-up ) {
+			padding: $margin-base ( 0.25 * $padding-base );
+		}
+
+		@include media( $large-screen-up ) {
 			padding: $margin-base 0;
 		}
 	}

@@ -11,6 +11,10 @@
 		background-position: right 0 top ( - rem(40) );
 
 		@include media( $medium-screen-up ) {
+			padding: $margin-base ( 0.25 * $padding-base );
+		}
+
+		@include media( $large-screen-up ) {
 			padding: $margin-base 0;
 		}
 	}
@@ -42,7 +46,7 @@
 
 			.link {
 				a {
-					font-size: 3.5rem;
+					font-size: 2.5rem;
 
 					&::before {
 						content: '';
@@ -53,6 +57,14 @@
 						margin-bottom: rem(15);
 						margin-right: rem(30);
 					}
+				}
+			}
+		}
+
+		@include media( $large-screen-up ) {
+			.link {
+				a {
+					font-size: 3.5rem;
 				}
 			}
 		}
