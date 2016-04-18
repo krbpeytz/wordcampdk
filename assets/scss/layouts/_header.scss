@@ -47,6 +47,7 @@
 			position: fixed;
 			top: 0.25 * $padding-base;
 			left: 0.25 * $padding-base;
+			background: url( https://2016.denmark.wordcamp.org/files/2016/03/icon-burger.png );
 
 			@include media( $medium-screen-up ) {
 				top: 0.5 * $padding-base;
@@ -81,6 +82,10 @@
 		&.toggled-on {
 			.menu-item {
 				display: inline-block;
+
+				a {
+					color: $color-white;
+				}
 			}
 		}
 
