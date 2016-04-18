@@ -9,6 +9,11 @@
 	}
 }
 
+.site {
+	overflow-x: hidden;
+	width: 100%;
+}
+
 .container {
 	position: relative;
 	@include max-width-scale();
