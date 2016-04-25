@@ -5,10 +5,11 @@
 	padding: ( 0.5 * $margin-base ) 0;
 	font-size: 0;
 	@include clearfix;
-	border-bottom: $color-silver rem(1) solid;
+	border-bottom: darken( $color-gainsboro, 2% ) rem(1) solid;
 
 	@include media( $medium-screen-up ) {
-		padding: $margin-base 0 ( 1.5 * $margin-base );
+		padding: $margin-base 0;
+		margin-bottom: 0.75 * $margin-base;
 	}
 
 	.widget-title {
