@@ -5,6 +5,7 @@
 	padding: ( 0.5 * $margin-base ) 0;
 	font-size: 0;
 	@include clearfix;
+	border-bottom: $color-silver;
 
 	@include media( $medium-screen-up ) {
 		padding: $margin-base 0 ( 1.5 * $margin-base );
@@ -143,7 +144,7 @@
 	}
 }
 
-#text-11 {
+/*#text-11 {
 	position: relative;
 	background-color: $color-gainsboro;
 
@@ -169,4 +170,4 @@
 		background-image: url( https://2016.denmark.wordcamp.org/files/2016/04/lines-bold-bg.png );
 		background-position: bottom;
 	}
-}
+}*/
