@@ -1,3 +1,125 @@
 #comments {
-	display: none;
+	position: relative;
+	@include max-width-scale();
+	@include outer-container();
+	padding: ( 0.5 * $margin-base ) ( 0.25 * $padding-base );
+	border-top: darken( $color-gainsboro, 2% ) rem(1) solid;
+	font-family: $font-family-base;
+
+	@include media( $medium-screen-up ) {
+		padding: ( 0.75 * $margin-base ) ( 0.25 * $padding-base );
+		margin-top: 0.75 * $margin-base;
+	}
+
+	@include media( $large-screen-up ) {
+		padding: ( 0.75 * $margin-base ) 0;
+	}
+
+	.comments-title {
+		display: block;
+		font-family: $font-family-alt;
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin: 0 0 ( 0.5 * $padding-base );
+
+		@include media( $medium-screen-up ) {
+			font-size: 2.5rem;
+			margin: 0 0 ( 0.75 * $padding-base );
+		}
+	}
+
+	.comment-list {
+		&, .children {
+			padding-left: 0;
+			list-style-type: none;
+		}
+	}
+
+	.comment-body {
+		position: relative;
+		@include clearfix;
+		margin: 1.5rem 0;
+		padding: 1.5rem 0;
+		border-bottom: rem(1) solid $color-gainsboro;
+
+		&:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	.comment-meta {
+		width: 100%;
+
+		@include media( $medium-screen-up ) {
+			width: rem(350);
+			float: left;
+		}
+	}
+
+	.comment-content {
+		width: 100%;
+
+		@include media( $medium-screen-up ) {
+			float: left;
+			@include calc( 'width', '100% - #{rem(350)}' );
+		}
+	}
+
+	.comment-author {
+		font-family: $font-family-alt;
+		margin: 0.25rem 0;
+
+		img {
+			@include border-top-radius(50%);
+			@include border-bottom-radius(50%);
+			float: left;
+			margin-right: 1rem;
+		}
+	}
+
+	.comment-metadata {
+		font-size: 75%;
+
+		&, a {
+			color: $color-black;
+		}
+	}
+
+	.reply,
+	.says {
+		display: none;
+	}
+
+	.comment-respond {
+		margin-top: 0.5 * $padding-base;
+
+		@include media( $medium-screen-up ) {
+			margin-top: 0.75 * $padding-base;
+		}
+
+		.comment-reply-title {
+			font-size: 1rem;
+			margin: 0;
+		}
+
+		label {
+			display: none;
+		}
+
+		.comment-form {
+			& > p {
+				margin-top: 0;
+			}
+			a {
+				color: $color-orange;
+				font-size: 0.75rem;
+			}
+		}
+	}
 }

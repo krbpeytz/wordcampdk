@@ -1,5 +1,8 @@
-.entry-content {
-	&, &.contact-form {
+.entry-content,
+.comments-area {
+	&,
+	&.contact-form,
+	&.comment-form {
 		label {
 			span {
 				margin: 0 0.5rem;
