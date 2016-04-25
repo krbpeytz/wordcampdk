@@ -79,6 +79,10 @@
 		font-family: $font-family-alt;
 		margin: 0.25rem 0;
 
+		a {
+			color: $color-black;
+		}
+
 		img {
 			@include border-top-radius(50%);
 			@include border-bottom-radius(50%);
