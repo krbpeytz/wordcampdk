@@ -2,7 +2,11 @@ body.page:not(.home), .single {
 	position: relative;
 
 	.site-content {
-		margin-top: rem(70);
+		margin-top: 0.25 * $padding-base;
+
+		@include media( $medium-screen-up ) {
+			margin-top: rem(70);
+		}
 	}
 
 	.site-main {
@@ -25,46 +29,55 @@ body.page:not(.home), .single {
 		position: relative;
 		@include max-width-scale();
 		@include outer-container();
-		padding: 0 ( 2 * $margin-base );
+		padding: 0 ( 0.25 * $padding-base );
 
 		a {
 			color: $color-orange;
 		}
 
-		&::before,
-		&::after {
-			content: '';
-			display: block;
-			position: absolute;
-			border-right: rem(1) solid $color-purple;
-			width: rem(2000);
-			height: rem(10);
-			left: - 145%;
-			top: 3rem;
-			opacity: 0.5;
-		}
+		@include media( $medium-screen-up ) {
+			padding: 0 ( 2 * $margin-base );
 
-		&::before {
-			border-right: rem(1) solid $color-purple;
-		}
-		&::after {
-			border-bottom: rem(1) solid $color-purple;
-			margin-top: - rem(9);
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				border-right: rem(1) solid $color-purple;
+				width: rem(2000);
+				height: rem(10);
+				left: - 145%;
+				top: 3rem;
+				opacity: 0.5;
+			}
+
+			&::before {
+				border-right: rem(1) solid $color-purple;
+			}
+			&::after {
+				border-bottom: rem(1) solid $color-purple;
+				margin-top: - rem(9);
+			}
 		}
 	}
 
 	h1 {
 		color: $color-black;
 		font-family: $font-family-alt;
-		font-size: 420%;
+		font-size: 225%;
 		letter-spacing: 0.15rem;
-		margin: ( 1.5 * $margin-base ) 0 $padding-base;
+		margin: ( 0.75 * $margin-base ) 0 0;
+
+		@include media( $medium-screen-up ) {
+			font-size: 420%;
+			margin: ( 1.5 * $margin-base ) 0 $padding-base;
+		}
 	}
 
 	.post-thumbnail {
-		margin-left: - ( 2 * $margin-base );
-		@include calc( 'width', '100% + ( 4 * #{$margin-base} )' );
-		height: rem(500);
+		margin-left: - ( 0.25 * $padding-base );
+		@include calc( 'width', '100% + ( 2 * ( 0.25 * #{$padding-base} ) )' );
+		height: rem(250);
 		overflow: hidden;
 
 		img {
@@ -72,17 +85,31 @@ body.page:not(.home), .single {
 			height: auto;
 			@include vertical-align();
 		}
+
+		@include media( $medium-screen-up ) {
+			margin-left: - ( 2 * $margin-base );
+			@include calc( 'width', '100% + ( 4 * #{$margin-base} )' );
+			height: rem(500);
+		}
 	}
 
 	.entry-content {
-		padding: ( 0.5 * $padding-base ) 0 $padding-base;
+		padding: ( 0.25 * $padding-base ) 0 ( 0.5 * $padding-base );
 		font-family: $font-family-base;
 		font-size: 120%;
 		line-height: 180%;
 		color: $color-eerie;
+
+		@include media( $medium-screen-up ) {
+			padding: ( 0.5 * $padding-base ) 0 $padding-base;
+		}
 	}
 
 	.entry-footer {
+		display: none;
+	}
+
+	.post-navigation {
 		display: none;
 	}
 }

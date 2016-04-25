@@ -1,5 +1,8 @@
-body.page aside#secondary {
-	display: none;
+body.page,
+body.single {
+	aside#secondary {
+		display: none;
+	}
 }
 
 .widget {

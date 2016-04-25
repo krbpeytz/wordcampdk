@@ -39,19 +39,17 @@
 			z-index: 12;
 		}
 
-		.home & {
-			&::after {
-				content: '';
-				height: rem(1);
-				width: rem(10000);
-				background: $color-white;
-				position: absolute;
-				right: - rem(5000);
-				top: 0;
-				z-index: 14;
-				opacity: 0.15;
-				@include transform( rotate(-45deg) );
-			}
+		&::after {
+			content: '';
+			height: rem(1);
+			width: rem(10000);
+			background: $color-white;
+			position: absolute;
+			right: - rem(5000);
+			top: 0;
+			z-index: 14;
+			opacity: 0.15;
+			@include transform( rotate(-45deg) );
 		}
 
 		.container {
@@ -59,26 +57,23 @@
 		}
 
 		.tagline {
-			background: url("https://2016.denmark.wordcamp.org/files/2016/03/wpdk-logo.png") top center no-repeat;
 			position: absolute;
-			top: 15%;
+			top: 25%;
 			right: 0;
 			width: 100%;
 			z-index: 13;
 			color: $color-white;
 			opacity: 0.9;
-			padding: 0 $padding-base;
-			padding: 13.5rem 1rem 0;
+			padding: 0 ( 0.25 * $padding-base );
 			text-align: center;
 
-			@media screen and (min-height: 37.5em) {
-				padding-top: 15rem;
-				top: 25%;
+			@include media( $medium-screen-up ) {
+				top: 38%;
+				text-align: right;
 			}
 
-			@media screen and (min-width: 60em) {
-				background-position: center left 3em;
-				padding: 5em 1em 5em 20em
+			@include media( $large-screen-up ) {
+				padding: 0 $padding-base;
 			}
 
 			.title {
@@ -86,14 +81,6 @@
 				font-size: 200%;
 				letter-spacing: 0.15rem;
 				margin-bottom: rem(15);
-
-				@media screen and (min-width: 60em) {
-					font-size: 300%;
-				}
-
-				@media screen and (min-width: 80em) {
-					font-size: 400%;
-				}
 
 				&::before,
 				&::after {
@@ -114,14 +101,53 @@
 					border-bottom: rem(1) solid $color-white;
 					margin-top: - rem(9);
 				}
+
+				@include media( $medium-screen-up ) {
+					font-size: 350%;
+				}
+
+				@include media( $large-screen-up ) {
+					font-size: 400%;
+				}
 			}
 
 			.subtitle {
 				font-family: $font-family-base;
-				font-size: 200%;
+				font-size: 100%;
 				font-weight: 100;
 				letter-spacing: 0.2rem;
 				text-transform: uppercase;
+
+				@include media( $medium-screen-up ) {
+					font-size: 200%;
+				}
+			}
+
+			&::before {
+				content: '';
+				position: relative;
+				display: inline-block;
+				height: rem(140);
+				width: rem(180);
+				background: url( https://2016.denmark.wordcamp.org/files/2016/03/wpdk-logo.png );
+				background-size: contain;
+				opacity: 0.9;
+				margin-bottom: 1.5rem;
+
+				@include media( $medium-screen-up ) {
+					position: absolute;
+					top: -2rem;
+					left: 0.25 * $padding-base;
+					height: rem(163);
+					width: rem(210);
+					margin-bottom: 0;
+				}
+
+				@include media( $large-screen-up ) {
+					left: $padding-base;
+					height: rem(208);
+					width: rem(267);
+				}
 			}
 		}
 	}

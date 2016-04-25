@@ -1,0 +1,172 @@
+.wcpt_widget_speakers {
+	position: relative;
+	@include max-width-scale();
+	@include outer-container();
+	padding: ( 0.5 * $margin-base ) 0;
+	font-size: 0;
+	@include clearfix;
+
+	@include media( $medium-screen-up ) {
+		padding: $margin-base 0 ( 1.5 * $margin-base );
+	}
+
+	.widget-title {
+		display: block;
+		font-family: $font-family-alt;
+		font-size: 2.5rem;
+		font-weight: 400;
+		padding-left: 0.25 * $padding-base;
+		margin: 0 0 ( 0.5 * $padding-base );
+
+		@include media( $medium-screen-up ) {
+			font-size: 3.5rem;
+			padding-left: $margin-base;
+			margin: 0 0 ( 0.75 * $padding-base );
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			display: none;
+			position: absolute;
+			border-left: rem(1) solid $color-black;
+			width: rem(2000);
+			height: rem(10);
+			right: - 90%;
+			top: $margin-base + 3rem;
+			opacity: 0.2;
+
+			@include media( $medium-screen-up ) {
+				display: block;
+			}
+		}
+
+		&::before {
+			border-left: rem(1) solid $color-black;
+		}
+		&::after {
+			border-bottom: rem(1) solid $color-black;
+			margin-top: - rem(9);
+		}
+	}
+
+	.wcorg-speaker {
+		font-size: 1rem;
+		width: 100%;
+		float: left;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		margin-bottom: 2rem;
+
+		display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flexbox;
+  		@include flex-direction( column );
+
+		@include media( $medium-screen-up ) {
+			width: 25%;
+			margin-bottom: 0;
+		}
+
+		h2 {
+			margin: 0;
+			font-family: $font-family-alt;
+			text-transform: uppercase;
+			font-weight: $font-weight-bold;
+			@include order(2);
+		}
+
+		.wcorg-speaker-description {
+			font-weight: $font-weight-light;
+			color: $color-purple;
+			text-transform: lowercase;
+			position: relative;
+			@include order(1);
+
+			img {
+				height: rem(100);
+				width: rem(100);
+				margin-bottom: 1.5rem;
+				@include border-top-radius(50%);
+				@include border-bottom-radius(50%);
+				filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+				filter: gray; /* IE6-9 */
+				-webkit-filter: grayscale(100%);
+				z-index: 1;
+				position: relative;
+
+				@include media( $medium-screen-up ) {
+					height: rem(200);
+					width: rem(200);
+				}
+			}
+
+			&::before {
+				content: '';
+				height: rem(120);
+				width: rem(120);
+				background-color: $color-purple;
+				@include border-top-radius(50%);
+				@include border-bottom-radius(50%);
+				position: absolute;
+				display: block;
+				margin-top: - rem(10);
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+				z-index: 2;
+				opacity: 0.7;
+
+				@include media( $medium-screen-up ) {
+					height: rem(220);
+					width: rem(220);
+				}
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+
+		.more-link {
+			font-size: 0;
+			position: absolute;
+			width: 100%;
+			@include calc( 'height', '100% + 2rem' );
+			z-index: 3;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+#text-11 {
+	position: relative;
+	background-color: $color-gainsboro;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		min-height: rem(500);
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		z-index: 1;
+	}
+
+	&::before {
+		top: 2rem;
+		background-image: url( https://2016.denmark.wordcamp.org/files/2016/03/lines-regular-bg.png );
+	}
+
+	&::after {
+		bottom: 2rem;
+		background-image: url( https://2016.denmark.wordcamp.org/files/2016/04/lines-bold-bg.png );
+		background-position: bottom;
+	}
+}
