@@ -36,6 +36,7 @@
     "gulp-svgmin": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
+    "jshint": "^2.9.2",
     "jshint-stylish": "*",
     "npm-check-updates": "*",
     "path": "*",
