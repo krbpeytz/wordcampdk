@@ -1,18 +1,16 @@
 {
-  "name": "drsales",
+  "name": "wordcampdk",
   "version": "0.0.1",
-  "description": "A WordPress/Gulp/Bower/Sass starter kit.",
-  "homepage": "http://gitlab.peytz.dk/wp/bullet-foundation",
+  "description": "A WordPress custom theme.",
   "repository": {
     "type": "git",
-    "url": "http://gitlab.peytz.dk/wp/bullet-foundation.git"
+    "url": "https://github.com/krbpeytz/wordcampdk.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-    "Peytz & Co.": "",
-    "Rasmus Taarnby": "rt@peytz.dk"
+    "Kristoffe Biglete": "krb@peytz.dk"
   },
   "license": "GNU General Public Licence 2.0",
   "main": "gulpfile.js",

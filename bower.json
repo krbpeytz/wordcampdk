@@ -1,11 +1,9 @@
 {
-  "name": "drsales",
-  "version": "4.0.0",
+  "name": "wordcampdk",
+  "version": "1.0.0",
   "homepage": "",
   "authors": [
-    "James Bonham <jb@peytz.dk>",
-    "Patrick Hesselberg <phh@peytz.dk>",
-    "Rasmus Taarnby <rt@peytz.dk>"
+    "Kristoffe Biglete <krb@peytz.dk>"
   ],
   "description": "A WordPress custom theme.",
   "keywords": [
