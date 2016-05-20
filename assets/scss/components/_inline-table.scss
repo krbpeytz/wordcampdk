@@ -6,6 +6,7 @@
 			padding: 0.5rem 1rem;
 			text-align: left;
 			border: lighten( $color-silver, 15% ) rem(1) solid;
+			line-height: 1.5rem;
 		}
 
 		tr:nth-child(odd) td {
@@ -15,6 +16,12 @@
 		th, tfoot td {
 			background-color: lighten( $color-silver, 25% ) !important;
 			font-weight: 600;
+		}
+
+		.wcpt-session-speakers {
+			font-size: 0.8em;
+			display: block;
+			margin-top: 0.333em;
 		}
 	}
 }
